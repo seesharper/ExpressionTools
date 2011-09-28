@@ -14,9 +14,9 @@ function PreProcess([string] $framework, [string] $nameSpace, [string]$sourceFil
 	
 	while (([string]$line = $reader.ReadLine()) -ne $null )
 	{
-		if($line.Contains("namespace ExpressionHelper"))
+		if($line.Contains("namespace ExpressionTools"))
 		{
-			$line = $line.Replace('ExpressionHelper', $nameSpace)
+			$line = $line.Replace('ExpressionTools', $nameSpace)
 		}		
 		if($line.StartsWith("#if") -or $line.StartsWith("#endif"))
 		{		

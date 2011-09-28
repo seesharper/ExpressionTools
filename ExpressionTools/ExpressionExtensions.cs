@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-
+#if NET35
+using System.Collections.ObjectModel;
+#endif
 namespace ExpressionTools
 {
     /// <summary>
