@@ -59,7 +59,7 @@ namespace ExpressionTools.Tests
             Expression<Func<int, bool>> exp1 = GetExpression();
             Expression<Func<int, bool>> exp2 = GetExpression();
             Expression<Func<int, bool>> result = exp1.And(exp2);
-            Assert.IsTrue(result.Find<BinaryExpression>(be => be.NodeType == ExpressionType.AndAlso).Count() == 1);
+            Assert.IsTrue(result.Contains<BinaryExpression>(be => be.NodeType == ExpressionType.AndAlso));
         }
 
         [TestMethod]
@@ -68,7 +68,7 @@ namespace ExpressionTools.Tests
             Expression<Func<int, bool>> exp1 = GetExpression();
             Expression<Func<int, bool>> exp2 = GetExpression();
             Expression<Func<int, bool>> result = exp1.Or(exp2);
-            Assert.IsTrue(result.Find<BinaryExpression>(be => be.NodeType == ExpressionType.OrElse).Count() == 1);
+            Assert.IsTrue(result.Contains<BinaryExpression>(be => be.NodeType == ExpressionType.OrElse));
         }
 
         [TestMethod]
@@ -90,6 +90,16 @@ namespace ExpressionTools.Tests
             Func<int, bool> result = expression.Compile();
             Assert.IsNotNull(result);
         }
+
+        [TestMethod]
+        public void Merge_TwoExpressions_ReturnsMergedExpression()
+        {
+            Expression<Func<int, bool>> exp1 = GetExpression();
+            Expression<Func<int, bool>> exp2 = GetExpression();
+            Expression<Func<int, bool>> expression = exp1.Merge(exp2,Expression.AndAlso);
+            Assert.IsTrue(expression.Body.NodeType == ExpressionType.AndAlso );
+        }
+
 
         [TestMethod]
         public void Merge_TwoExpressions_ReplacesOnlyParametersFoundInFirstExpression()

@@ -131,3 +131,5 @@ $project.ProjectItems.Item("Dummy.txt").Delete()
 $project.ProjectItems.AddFromFileCopy($destination)
 
 Remove-Item $destination
+
+$project.DTE.ItemOperations.Navigate('https://github.com/seesharper/ExpressionTools/wiki/Documentation')
