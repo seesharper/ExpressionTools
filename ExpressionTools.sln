@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressionTools", "ExpressionTools\ExpressionTools.csproj", "{04D3C4CE-C363-49F0-81B3-9AA97C37D561}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressionTools.Tests", "ExpressionTools.Tests\ExpressionTools.Tests.csproj", "{B60D4C03-12D4-4381-8251-65DA5325D9C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{12827A4F-2D2C-44CF-BC18-3BE262FA7C8F}"
+	ProjectSection(SolutionItems) = preProject
+		ExpressionTools.vsmdi = ExpressionTools.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = ExpressionTools.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04D3C4CE-C363-49F0-81B3-9AA97C37D561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04D3C4CE-C363-49F0-81B3-9AA97C37D561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04D3C4CE-C363-49F0-81B3-9AA97C37D561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04D3C4CE-C363-49F0-81B3-9AA97C37D561}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B60D4C03-12D4-4381-8251-65DA5325D9C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B60D4C03-12D4-4381-8251-65DA5325D9C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B60D4C03-12D4-4381-8251-65DA5325D9C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B60D4C03-12D4-4381-8251-65DA5325D9C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
